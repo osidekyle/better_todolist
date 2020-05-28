@@ -79,12 +79,22 @@ function filterToDo(e){
                 break;
             case 'completed':
                 if(todo.classList.contains('completed')){
-                    console.log('yuh');
+                    console.log('completed tasks')
+                    todo.style.display='flex';
+                }
+                else{
+                    console.log('incomplete tasks')
+                    todo.style.display="none";
+                }
+                break;
+            case 'uncompleted':
+                if(!todo.classList.contains('completed')){
                     todo.style.display='flex';
                 }
                 else{
                     todo.style.display='none';
                 }
+                break;
                 
             
         }
